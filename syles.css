@@ -1,0 +1,31 @@
+.inputs {
+    width: 300px;
+}
+
+.main {
+    background-color: black;
+}
+
+.header {
+    display: flex;
+}
+
+.row {
+    display: flex;
+}
+
+.length, .size {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    margin-bottom: 10px;
+}
+
+.column {
+    background-color: white;
+    margin-top: 1px;
+    margin-left: 1px;
+
+}
