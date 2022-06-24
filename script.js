@@ -4,10 +4,25 @@ const input = document.querySelector('input[type="submit"]');
 const sizeInput = document.querySelector('input#size');
 const lengthInput = document.querySelector('input#length');
 
-let length = 12;
-let size = 20;
-
 function createDivs() {
+
+    let length = parseInt(lengthInput.value);
+    let size = parseInt(sizeInput.value);
+
+    if (
+        size === 0  ||
+        isNaN(size) ||
+        size % 1 != 0
+    ) {
+        return
+    }
+    if (
+        length === 0  ||
+        isNaN(length) ||
+        length % 1 != 0
+    ) {
+        return
+    }
 
     for (i = 0; i < length; i++) {
         const div = document.createElement('div');
@@ -42,5 +57,4 @@ function createDivs() {
 }
 
 input.addEventListener('click',createDivs);
-
 createDivs();

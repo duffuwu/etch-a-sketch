@@ -10,14 +10,26 @@
     <div class="inputs">
         <div class="length">
             <label for="length">Number of squares</label>
-            <input type="text" id="length">
+            <input type="number" 
+                   value="12"
+                   id="length"
+                   onkeypress="return (
+                     (event.charCode != 8 && event.charCode == 0) ||
+                     (event.charCode >= 48 && event.charCode <= 57)
+                    )"/>
         </div>
         <div class="size">
             <label for="size">Size of squares</label>
-            <input type="text" id="size">
+            <input type="number" 
+                   value="20"
+                   id="size"
+                   onkeypress="return (
+                    (event.charCode != 8 && event.charCode == 0) ||
+                    (event.charCode >= 48 && event.charCode <= 57)
+                   )"/>
         </div>
+        <input type="submit" value="Resize">
     </div>
-    <input type="submit" value="Resize">
     <div class="main"></div>
     <script src="./script.js"></script>
 </body>
