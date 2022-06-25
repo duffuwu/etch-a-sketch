@@ -1,13 +1,22 @@
-const main = document.querySelector('.main');
 const styleSheet = document.styleSheets[0];
 const input = document.querySelector('input[type="submit"]');
 const sizeInput = document.querySelector('input#size');
 const lengthInput = document.querySelector('input#length');
 
+
 function createDivs() {
+
+    document.querySelector('.main').remove();
+
+    var elem = document.createElement('div');
+    document.body.appendChild(elem);
+    elem.classList.add('main');
+
+    const main = document.querySelector('.main');
 
     let length = parseInt(lengthInput.value);
     let size = parseInt(sizeInput.value);
+
 
     if (
         size === 0  ||
@@ -56,5 +65,6 @@ function createDivs() {
 
 }
 
-input.addEventListener('click',createDivs);
+input.addEventListener('click', createDivs);
+
 createDivs();
