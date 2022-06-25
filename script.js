@@ -1,10 +1,10 @@
 const styleSheet = document.styleSheets[0];
-const input = document.querySelector('input[type="submit"]');
+const input = document.querySelector('button');
 const sizeInput = document.querySelector('input#size');
 const lengthInput = document.querySelector('input#length');
 
 
-function createDivs() {
+function generateGrid() {
 
     document.querySelector('.main').remove();
 
@@ -20,15 +20,13 @@ function createDivs() {
 
     if (
         size === 0  ||
-        isNaN(size) ||
-        size % 1 != 0
+        isNaN(size)
     ) {
         return
     }
     if (
         length === 0  ||
-        isNaN(length) ||
-        length % 1 != 0
+        isNaN(length)
     ) {
         return
     }
@@ -63,8 +61,13 @@ function createDivs() {
     main.style.width = `${(length * size) + length + 1}px`;
     main.style.height = `${(length * size) + length + 1}px`;
 
+    const divs = document.querySelectorAll('.column');
+    return divs.forEach(div => div.addEventListener('mouseenter',colorSquare));
+
 }
 
-input.addEventListener('click', createDivs);
+function colorSquare() {
+    this.style.background = 'black';
+}
 
-createDivs();
+generateGrid();
