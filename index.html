@@ -28,7 +28,10 @@
                     (event.charCode >= 48 && event.charCode <= 57)
                    )"/>
         </div>
-        <button onclick="generateGrid()">Resize</button>
+        <div class="buttons">
+            <button name="submit" onclick="generateGrid()">Resize</button>
+            <button name="clear" onclick="clearGrid()">Clear</button>
+        </div>
     </div>
     <div class="main"></div>
     <script src="./script.js"></script>

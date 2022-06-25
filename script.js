@@ -70,4 +70,9 @@ function colorSquare() {
     this.style.background = 'black';
 }
 
+function clearGrid() {
+    const grid = document.querySelectorAll('.column');
+    grid.forEach(square => square.style.background = 'white');
+}
+
 generateGrid();

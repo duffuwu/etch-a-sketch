@@ -19,6 +19,11 @@
     margin-bottom: 10px;
 }
 
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
 button {
     margin-bottom: 10px;
 }
